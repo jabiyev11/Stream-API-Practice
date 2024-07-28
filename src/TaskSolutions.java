@@ -313,17 +313,17 @@ public class TaskSolutions {
         listOfEmployeeListByDepartment.forEach(System.out::println);
     }
 
-    private static void yearsOfExperience(){
+    private static void yearsOfExperience() {
 
-        List<Integer> listOfExperienceYears = employeeList
+        List<String> listOfExperienceYears = employeeList
                 .stream()
-                .map(employee -> employee.getStartDate().until(LocalDate.now()).getYears())
+                .map(employee -> employee.getName() + " " + employee.getSurname() + "," + employee.getStartDate().until(LocalDate.now()).getYears())
                 .toList();
 
         listOfExperienceYears.forEach(System.out::println);
     }
 
-    private static void findLongestServingEmployee(){
+    private static void findLongestServingEmployee() {
 
         Optional<Employee> longestServingEmployee = employeeList
                 .stream()
@@ -332,7 +332,7 @@ public class TaskSolutions {
         longestServingEmployee.ifPresent(System.out::println);
     }
 
-    private static void combinedSalaryOfEmployees(){
+    private static void combinedSalaryOfEmployees() {
 
         Double totalSalary = employeeList
                 .stream()
@@ -342,7 +342,7 @@ public class TaskSolutions {
         System.out.println(totalSalary);
     }
 
-    private static void numberOfEmployeesPerPosition(){
+    private static void numberOfEmployeesPerPosition() {
 
         Map<Position, List<Employee>> positionToEmployees = employeeList
                 .stream()
@@ -355,38 +355,37 @@ public class TaskSolutions {
         });
     }
 
-
     public static void main(String[] args) {
-        employeesAgeGreaterThan30();
-        listOfEmployeeNames();
-        employeeWithHighestSalary();
-        calculateAverageSalary();
-        employeesSortedBySurname();
-        isAllOlderThan25();
-        nameOfEmployeesInIT();
-        groupByDepartment();
-        countOfEmployeesByDepartment();
-        averageAgePerDepartment();
-        partitionEmployersAndEmployees();
-        getTotalSalary();
-        employeeWithLowestSalary();
-        listOfUniqueSurnames();
-        groupEmployeeNameToSalary();
-        notEmployers();
-        getFullName();
-        updateSalaryBy10Percent();
-        salarySumOfEmployeesOfIT();
-        sumOfSalariesPerDepartment();
-        employeesWithSalaryGreaterThanAverage();
-        employeeListToMap();
-        namesBySortedSalary();
-        findOldestEmployeePerDepartment();
-        mergeNameAndSurname();
-        flattenListOfList();
+//        employeesAgeGreaterThan30();
+//        listOfEmployeeNames();
+//        employeeWithHighestSalary();
+//        calculateAverageSalary();
+//        employeesSortedBySurname();
+//        isAllOlderThan25();
+//        nameOfEmployeesInIT();
+//        groupByDepartment();
+//        countOfEmployeesByDepartment();
+//        averageAgePerDepartment();
+//        partitionEmployersAndEmployees();
+//        getTotalSalary();
+//        employeeWithLowestSalary();
+//        listOfUniqueSurnames();
+//        groupEmployeeNameToSalary();
+//        notEmployers();
+//        getFullName();
+//        updateSalaryBy10Percent();
+//        salarySumOfEmployeesOfIT();
+//        sumOfSalariesPerDepartment();
+//        employeesWithSalaryGreaterThanAverage();
+//        employeeListToMap();
+//        namesBySortedSalary();
+//        findOldestEmployeePerDepartment();
+//        mergeNameAndSurname();
+//        flattenListOfList();
         yearsOfExperience();
-        findLongestServingEmployee();
-        combinedSalaryOfEmployees();
-        numberOfEmployeesPerPosition();
+//        findLongestServingEmployee();
+//        combinedSalaryOfEmployees();
+//        numberOfEmployeesPerPosition();
 
 
     }
